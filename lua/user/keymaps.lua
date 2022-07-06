@@ -1,4 +1,5 @@
 local opts = { noremap = true, silent = true }
+local copilot_opts = { silent = true, script = true, expr = true }
 
 local term_opts = { silent = true }
 
@@ -34,14 +35,18 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>kl", ":BD<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<leader>n", ":noh<CR>", opts)
 
 -- Insert --
 -- Press jk fast to exit insert mode 
 keymap("i", "jk", "<ESC>", opts)
+-- Insert the current file name
+keymap("i", "<leader>fn", '<C-R>=expand("%:t:r")<CR>', opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -59,6 +64,9 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+keymap("i", "<M-j>", "copilot#Accept('<CR>')", copilot_opts)
+keymap("n", "<Leader><Leader>f", ":Fixmyjs<CR>", opts)
 
 -- Terminal --
 -- Better terminal navigation
