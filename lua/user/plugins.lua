@@ -59,9 +59,11 @@ return packer.startup(function(use)
 	use({ "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" })
 	use("folke/which-key.nvim")
 
+  use ({ "mattn/emmet-vim", commit = "def5d57a1ae5afb1b96ebe83c4652d1c03640f4d" })
   use "qpkorr/vim-bufkill"
   use "plasticboy/vim-markdown"
   use "tpope/vim-endwise"
+  -- use "kylechui/nvim-surround"
   use "tpope/vim-surround"
   use "ruanyl/vim-fixmyjs"
 
@@ -100,6 +102,7 @@ return packer.startup(function(use)
 	use({ "neovim/nvim-lspconfig", commit = "148c99bd09b44cf3605151a06869f6b4d4c24455" }) -- enable LSP
 	use({ "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
+  use({ "simrat39/symbols-outline.nvim", commit = "15ae99c27360ab42e931be127d130611375307d5" })
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })

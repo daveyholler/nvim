@@ -68,6 +68,9 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("i", "<M-j>", "copilot#Accept('<CR>')", copilot_opts)
 keymap("n", "<Leader><Leader>f", ":Fixmyjs<CR>", opts)
 
+-- Symbols Outline --
+keymap("n", "<M-k>", ":SymbolsOutline<CR>", opts)
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
