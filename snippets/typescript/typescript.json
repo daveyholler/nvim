@@ -1,0 +1,29 @@
+{
+  "i18n": {
+    "prefix": "i18n",
+    "body": ["i18n.translate('xpack.enterpriseSearch.${1:first}', {defaultMessage: \"${2:text}\"})"],
+    "description": "Internationalization"
+  },
+  "javascriptComponent": {
+    "prefix": "jfc",
+    "body": [
+      "export const ${1:name} = () => {",
+      "  return (",
+      "    <>${2:stuff}</>",
+      "  )",
+      "}"
+    ],
+    "description": "Junk"
+  },
+  "javascriptComponent": {
+    "prefix": "tfc",
+    "body": [
+      "export const ${1:name}:React.FC<> = ({}) => {",
+      "  return (",
+      "    <>${2:stuff}</>",
+      "  )",
+      "}"
+    ],
+    "description": "Typescript Function Component"
+  }
+}
