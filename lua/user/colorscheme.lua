@@ -1,7 +1,7 @@
 vim.g.catppuccin_flavour = "mocha"
 vim.cmd [[
 try
-  colorscheme dracula
+  colorscheme catppuccin
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
